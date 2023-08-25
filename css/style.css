@@ -1,517 +1,640 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 /*  General Rules */
-body{
-    font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
 }
-h1,h2,h3,h4,h5,h6{
-    font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
 }
-:root{
-    --main-color: #1c1c1c;
-    --secondery-color: #fff;
-    --bg-secondery-color: #f7f7f7;
+:root {
+  --main-color: #1c1c1c;
+  --secondery-color: #fff;
+  --bg-secondery-color: #f7f7f7;
 }
-.heading-font{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
+.heading-font {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
 }
 /* ====================== Start NavBar ====================== */
-.navbar{
-    background-color: var(--secondery-color) !important;
-    z-index: 555;
+.navbar {
+  background-color: transparent;
+  z-index: 555;
 }
-.navbar-nav .nav-link{
-    color: var(--main-color);
+.nav-item{
     position: relative;
 }
-.navbar-nav .nav-link::before{
-    content: "";
-    width: 0;
-    height: 2px;
-    position: absolute;
-    left: 12%;
-    background-color: var(--main-color);
-    bottom: 15%;
-    border-radius: 5px;
-    transition: all 0.5s;
+.navbar-nav .nav-link {
+  color: var(--main-color);
+  position: relative;
 }
-.navbar-nav .nav-link.active::before{
-    width: 75%;
-    left: 12%;
+.decorations {
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 12%;
+  background-color: #fff;
+  bottom: 15%;
+  border-radius: 5px;
+  transition: all 0.5s;
 }
-.navbar-nav .nav-link:hover{
-    color: var(--main-color);
+.navbar-nav .nav-link.active  .decorations{
+  width: 75%;
+  left: 12%;
 }
-.navbar-nav .nav-link.active{
-    color: var(--main-color);
+.navbar-brand , .nav-link{
+  color: #fff ;
 }
-/* ====================== End NavBar ====================== */
-/* ====================== Start Head Section ====================== */
-.head-layer{
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)) , url(../images/bg.jpg);
-    background-size: cover; 
+.navbar-expand-lg .navbar-nav .nav-link {
+    color: #fff;
 }
-.head-icons > a{
-    background-color:rgba(0,0,0,0.6);
-    display: block;
-    width: 30px;
-    height: 30px;
+.navbar-toggler-icon{
+    background-image: none !important;
 }
-.head-icons > a > i{
-    font-size: 14px;
+.navbar-toggler-icon > i {
+    color: #fff;
+    font-size: 22px;
 }
-.haed-caption > h2::after{
-    content: "Larry Daniels|";
-    animation: typing-animation;
-    animation-duration: 7s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    font-weight: 400;
+.navbar-toggler:focus ,.navbar-toggler:active,.navbar-toggler-icon:focus {
+    border: none !important;
+    box-shadow: none !important;
 }
 
-@keyframes typing-animation{
-    0%{content: "Larry Daniels|";}
-    1.92%{content: "Larry Daniels|";}
-    3.84%{content: "Larry Daniels|";}
-    5.75%{content: "Larry Daniels|";}
-    7.68%{content: "Larry Daniel|";}
-    9.6%{content: "Larry Danie|";}
-    11.52%{content: "Larry Dani|";}
-    13.44%{content: "Larry Dan|";}
-    15.36%{content: "Larry Da|";}
-    17.28%{content: "Larry D||";}
-    19.2%{content: "Larry|";}
-    21.12%{content: "Larr|";}
-    23.04%{content: "Lar|";}
-    24.96%{content: "La|";}
-    26.88%{content: "L|";}
-    28.8%{content: "|";}
-    30.72%{content: "D|";}
-    32.64%{content: "De|";}
-    34.56%{content: "Dev|";}
-    36.48%{content: "Deve|";}
-    38.4%{content: "Devel|";}
-    40.32%{content: "Develo|";}
-    42.24%{content: "Develop|";}
-    44.16%{content: "Develope|";}
-    46.08%{content: "Developer|";}
-    48%{content: "Developer|";}
-    49.92%{content: "Developer|";}
-    51.84%{content: "Develope|";}
-    53.76%{content: "Develop|";}
-    55.68%{content: "Develo|";}
-    57.6%{content: "Devel|";}
-    59.52%{content: "Deve|";}
-    61.44%{content: "De|";}
-    63.36%{content: "D|";}
-    65.28%{content: "|";}
-    67.2%{content: "D|";}
-    69.12%{content: "De|";}
-    71.04%{content: "Des|";}
-    72.96%{content: "Desi|";}
-    74.88%{content: "Desig|";}
-    76.8%{content: "Design|";}
-    78.72%{content: "Designe|";}
-    80.64%{content: "Designer|";}
-    82.56%{content: "Designer|";}
-    84.48%{content: "Designer|";}
-    86.4%{content: "Designe|";}
-    88.32%{content: "Design|";}
-    90.24%{content: "Desig|";}
-    92.16%{content: "Desi|";}
-    94.08%{content: "Des|";}
-    96%{content: "De|";}
-    97.92%{content: "D|";}
-    100%{content: "|";}
+/* ====================== End NavBar ====================== */
+/* ====================== Start Head Section ====================== */
+.head-layer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/bg.jpg);
+  background-size: cover;
+}
+.head-icons > a {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+.head-icons > a > i {
+  font-size: 14px;
+}
+.haed-caption > h2::after {
+  content: "Larry Daniels|";
+  animation: typing-animation;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  font-weight: 400;
+}
+
+@keyframes typing-animation {
+  0% {
+    content: "Larry Daniels|";
+  }
+  1.92% {
+    content: "Larry Daniels|";
+  }
+  3.84% {
+    content: "Larry Daniels|";
+  }
+  5.75% {
+    content: "Larry Daniels|";
+  }
+  7.68% {
+    content: "Larry Daniel|";
+  }
+  9.6% {
+    content: "Larry Danie|";
+  }
+  11.52% {
+    content: "Larry Dani|";
+  }
+  13.44% {
+    content: "Larry Dan|";
+  }
+  15.36% {
+    content: "Larry Da|";
+  }
+  17.28% {
+    content: "Larry D||";
+  }
+  19.2% {
+    content: "Larry|";
+  }
+  21.12% {
+    content: "Larr|";
+  }
+  23.04% {
+    content: "Lar|";
+  }
+  24.96% {
+    content: "La|";
+  }
+  26.88% {
+    content: "L|";
+  }
+  28.8% {
+    content: "|";
+  }
+  30.72% {
+    content: "D|";
+  }
+  32.64% {
+    content: "De|";
+  }
+  34.56% {
+    content: "Dev|";
+  }
+  36.48% {
+    content: "Deve|";
+  }
+  38.4% {
+    content: "Devel|";
+  }
+  40.32% {
+    content: "Develo|";
+  }
+  42.24% {
+    content: "Develop|";
+  }
+  44.16% {
+    content: "Develope|";
+  }
+  46.08% {
+    content: "Developer|";
+  }
+  48% {
+    content: "Developer|";
+  }
+  49.92% {
+    content: "Developer|";
+  }
+  51.84% {
+    content: "Develope|";
+  }
+  53.76% {
+    content: "Develop|";
+  }
+  55.68% {
+    content: "Develo|";
+  }
+  57.6% {
+    content: "Devel|";
+  }
+  59.52% {
+    content: "Deve|";
+  }
+  61.44% {
+    content: "De|";
+  }
+  63.36% {
+    content: "D|";
+  }
+  65.28% {
+    content: "|";
+  }
+  67.2% {
+    content: "D|";
+  }
+  69.12% {
+    content: "De|";
+  }
+  71.04% {
+    content: "Des|";
+  }
+  72.96% {
+    content: "Desi|";
+  }
+  74.88% {
+    content: "Desig|";
+  }
+  76.8% {
+    content: "Design|";
+  }
+  78.72% {
+    content: "Designe|";
+  }
+  80.64% {
+    content: "Designer|";
+  }
+  82.56% {
+    content: "Designer|";
+  }
+  84.48% {
+    content: "Designer|";
+  }
+  86.4% {
+    content: "Designe|";
+  }
+  88.32% {
+    content: "Design|";
+  }
+  90.24% {
+    content: "Desig|";
+  }
+  92.16% {
+    content: "Desi|";
+  }
+  94.08% {
+    content: "Des|";
+  }
+  96% {
+    content: "De|";
+  }
+  97.92% {
+    content: "D|";
+  }
+  100% {
+    content: "|";
+  }
 }
 /* ====================== Enad Head Section ====================== */
 /* ====================== Start About Section ====================== */
 
-.hero-img{
-    padding: 0 0 0 30px;
-    position: relative;
+.hero-img {
+  padding: 0 0 0 30px;
+  position: relative;
 }
 .hero-img:after {
-    content: "";
-    width: 80%;
-    height: 80%;
-    position: absolute;
-    left: 0px;
-    bottom: -30px;
-    background-image: url(../images/dots.png);
-    background-repeat: repeat;
-    z-index: -1;
+  content: "";
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 0px;
+  bottom: -30px;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
 }
 
-.progress, .progress-stacked {
-    --bs-progress-height: 1.5rem;
-    --bs-progress-font-size: 0.95rem;
-    --bs-progress-bar-bg: black;
-    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset !important;
-    background-color: var(--secondery-color);
+.progress,
+.progress-stacked {
+  --bs-progress-height: 1.5rem;
+  --bs-progress-font-size: 0.95rem;
+  --bs-progress-bar-bg: black;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset !important;
+  background-color: var(--secondery-color);
 }
 .progress-bar {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-.about-caption span{
-    color: #fff;
+.about-caption span {
+  color: #fff;
 }
-.about-caption p{
-    color: #748182;
-    font-size: 15px;
-    max-width: 650px;
-    line-height: 1.6;
+.about-caption p {
+  color: #748182;
+  font-size: 15px;
+  max-width: 650px;
+  line-height: 1.6;
 }
-
-
 
 .btn {
-    --bs-btn-padding-x: 1.875rem;
-    --bs-btn-padding-y: 0.625rem;
-    --bs-btn-font-family: ;
-    --bs-btn-font-size: 0.8rem;
-    --bs-btn-font-weight: 400;
-    --bs-btn-line-height: 1.5;
-    --bs-btn-color: var(--secondery-color);
-    background-color: var(--main-color);
-    transition: all 0.5s;
+  --bs-btn-padding-x: 1.875rem;
+  --bs-btn-padding-y: 0.625rem;
+  --bs-btn-font-family: ;
+  --bs-btn-font-size: 0.8rem;
+  --bs-btn-font-weight: 400;
+  --bs-btn-line-height: 1.5;
+  --bs-btn-color: var(--secondery-color);
+  background-color: var(--main-color);
+  transition: all 0.5s;
 }
-.btn1:hover{
-    border-color: var(--main-color);
+.btn1:hover {
+  border-color: var(--main-color);
 }
-.btn2{
-    background-color: var(--secondery-color);
-    border-color: var(--main-color);
-    color: var(--main-color);
+.btn2 {
+  background-color: var(--secondery-color);
+  border-color: var(--main-color);
+  color: var(--main-color);
 }
-.btn2:hover{
-    background-color: var(--main-color);
-    color: var(--secondery-color);
+.btn2:hover {
+  background-color: var(--main-color);
+  color: var(--secondery-color);
 }
 /* ====================== End About Section ====================== */
 /* ====================== Start Services Section ====================== */
-.services{
-    background-color: var(--bg-secondery-color);
-    overflow: auto;
+.services {
+  background-color: var(--bg-secondery-color);
+  overflow: auto;
 }
 .section-head {
-    margin-bottom: 80px;
-    margin-top: 80px;
-    text-align: center;
+  margin-bottom: 80px;
+  margin-top: 80px;
+  text-align: center;
 }
 .section-head h3 {
-    font-weight: 900;
-    font-size: 40px;
-    position: relative;
-    display: inline-block;
-    z-index: 4;
+  font-weight: 900;
+  font-size: 40px;
+  position: relative;
+  display: inline-block;
+  z-index: 4;
 }
 .section-head h3:after {
-    content: "";
-    width: 100%;
-    height: 30px;
-    background-image: url(../images/dots.png);
-    background-repeat: repeat;
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    z-index: -1;
+  content: "";
+  width: 100%;
+  height: 30px;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  z-index: -1;
 }
-.services-inner{
-    padding: 50px 20px 10px 20px !important;
+.services-inner {
+  padding: 50px 20px 10px 20px !important;
 }
-.services-inner > h3{
-    font-weight: 800;
+.services-inner > h3 {
+  font-weight: 800;
 }
-.services-inner > p{
-    font-size: 14px;
-    color: #748182;
-    max-width: 320px;
-    margin: auto;
-    margin-bottom: 40px;
+.services-inner > p {
+  font-size: 14px;
+  color: #748182;
+  max-width: 320px;
+  margin: auto;
+  margin-bottom: 40px;
 }
-.icon-services-conatiner{
-    width: 65px;
-    height: 65px;
-    background-color: var(--bg-secondery-color);
-    transition: all 0.5s;
+.icon-services-conatiner {
+  width: 65px;
+  height: 65px;
+  background-color: var(--bg-secondery-color);
+  transition: all 0.5s;
 }
 .services-item:hover .icon-services-conatiner {
-    background-color: var(--main-color);
-    color: var(--secondery-color);
+  background-color: var(--main-color);
+  color: var(--secondery-color);
 }
 
 /* ====================== End Services Section ====================== */
 /* ====================== Start Work Section ====================== */
 
 .nav-pills {
-    --bs-nav-pills-border-radius: var(--bs-border-radius);
-    --bs-nav-pills-link-active-color: #000000;
-    --bs-nav-pills-link-active-bg: #ffffff;
+  --bs-nav-pills-border-radius: var(--bs-border-radius);
+  --bs-nav-pills-link-active-color: #000000;
+  --bs-nav-pills-link-active-bg: #ffffff;
 }
-.nav-pills .nav-link::before{
-    content: "";
-    width: 0%;
-    height: 2.5px;
-    background-color: #000000;
-    position: absolute;
-    left: 15%;
-    bottom: 5px;
-    transition: all 0.5s;
+.nav-pills .nav-link::before {
+  content: "";
+  width: 0%;
+  height: 2.5px;
+  background-color: #000000;
+  position: absolute;
+  left: 15%;
+  bottom: 5px;
+  transition: all 0.5s;
 }
-.nav-pills .nav-link.active::before{
-    content: "";
-    width: 70%;
-    height: 2.5px;
-    background-color: #000000;
-    position: absolute;
-    left: 15%;
-    bottom: 5px;
+.nav-pills .nav-link.active::before {
+  content: "";
+  width: 70%;
+  height: 2.5px;
+  background-color: #000000;
+  position: absolute;
+  left: 15%;
+  bottom: 5px;
 }
-.nav-pills .nav-link{
-    position: relative;
-    font-weight: 700 !important;
-    color: #000000;
+.nav-pills .nav-link {
+  position: relative;
+  font-weight: 700 !important;
+  color: #000000;
 }
-.work-layer-container{
-    height: 100%;
+.work-layer-container {
+  height: 100%;
 }
-.work-layer{
-    background: rgba(255, 255, 255, 0.95);
-    height: 100%;
-    opacity: 0;
-    transition: all 0.5s;
+.work-layer {
+  background: rgba(255, 255, 255, 0.95);
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
 }
-.iconbg-div{
-    width: 30px;
-    height: 30px;
-    background-color: black;
-    color: var(--secondery-color);
-    transition: 0.5s all;
+.iconbg-div {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  color: var(--secondery-color);
+  transition: 0.5s all;
 }
-.iconbg-div:hover{
-    background-color: var(--secondery-color);
-    color: black;
-    border: 0.5px solid black;
+.iconbg-div:hover {
+  background-color: var(--secondery-color);
+  color: black;
+  border: 0.5px solid black;
 }
-.work-icon-conatiner{
-    position: absolute;
-    left: 38%;
-    top: 60%;
-    transition: all 0.5s;
+.work-icon-conatiner {
+  position: absolute;
+  left: 38%;
+  top: 60%;
+  transition: all 0.5s;
 }
-.work-layer-container:hover .work-icon-conatiner{
-    top: 55%;
+.work-layer-container:hover .work-icon-conatiner {
+  top: 55%;
 }
-.chiled > h5{
-    position: absolute;
-    left: 33%;
-    top: 40%;
-    transition: all 0.5s;
+.chiled > h5 {
+  position: absolute;
+  left: 33%;
+  top: 40%;
+  transition: all 0.5s;
 }
-.work-layer-container:hover .chiled > h5{
-    top: 45%;
+.work-layer-container:hover .chiled > h5 {
+  top: 45%;
 }
-.work-layer-container:hover .work-layer{
-    opacity: 1;
+.work-layer-container:hover .work-layer {
+  opacity: 1;
 }
 /* ====================== End Work Section ====================== */
 /* ====================== Start Testimonials Section ====================== */
 
-.client{
-    background-color: var(--bg-secondery-color);
-    overflow: auto;
-
+.client {
+  background-color: var(--bg-secondery-color);
+  overflow: auto;
 }
-.client-section-head{
-    margin-bottom: 20px;
-    margin-top: 80px;
-    text-align: center;
+.client-section-head {
+  margin-bottom: 20px;
+  margin-top: 80px;
+  text-align: center;
 }
 .client-section-head h3 {
-    font-weight: 900;
-    font-size: 40px;
-    position: relative;
-    display: inline-block;
-    z-index: 4;
+  font-weight: 900;
+  font-size: 40px;
+  position: relative;
+  display: inline-block;
+  z-index: 4;
 }
 .client-section-head h3:after {
-    content: "";
-    width: 100%;
-    height: 30px;
-    background-image: url(../images/dots.png);
-    background-repeat: repeat;
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    z-index: -1;
+  content: "";
+  width: 100%;
+  height: 30px;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  z-index: -1;
 }
 .slider-content img {
-    max-width: 110px;
+  max-width: 110px;
 }
 .client_review {
-    max-width: 1000px;
-    color: #748182;
-    font-size: 15px;
+  max-width: 1000px;
+  color: #748182;
+  font-size: 15px;
 }
 .slider-content > span {
-    font-size: 12px;
-    font-weight: 600;
-    color: #888;
-    margin-bottom: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  margin-bottom: 30px;
 }
 .carousel-indicators {
-    bottom: -55px;
+  bottom: -55px;
 }
 
 .carousel-indicators [data-bs-target] {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #d6d6d6;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d6d6d6;
 }
 
 .carousel-indicators .active {
-    opacity: 1;
-    background-color: #869791;
+  opacity: 1;
+  background-color: #869791;
 }
 
 /* ====================== End Testimonials Section ====================== */
 /* ====================== Start Icons Section ====================== */
-.icons-inner p{
-    color: #748182;
+.icons-inner p {
+  color: #748182;
 }
 /* ====================== End Icons Section ====================== */
 /* ====================== Start Team Section ====================== */
-.team{
-    background-color: var(--bg-secondery-color);
+.team {
+  background-color: var(--bg-secondery-color);
 }
-.card-body{
-    background-color: #5b5b5b;
+.card-body {
+  background-color: #5b5b5b;
 }
-.card-body > h3{
-    font-weight: bold;
-    text-wrap: nowrap;
+.card-body > h3 {
+  font-weight: bold;
+  text-wrap: nowrap;
 }
-.card img{
-    transition: all 0.5s;
+.card img {
+  transition: all 0.5s;
 }
-.img-cont:hover img{
-    transform: scale(1.2,1.2);
+.img-cont:hover img {
+  transform: scale(1.2, 1.2);
 }
-.icon-round{
-    width: 40px;
-    height: 40px;
-    color: var(--secondery-color);
-    border: 1px solid black;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin-right: 5px;
+.icon-round {
+  width: 40px;
+  height: 40px;
+  color: var(--secondery-color);
+  border: 1px solid black;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-right: 5px;
 }
-.icon-round:hover{
-    background-color: #fff !important;
-    color: var(--main-color);
-    border: 1px solid black;
+.icon-round:hover {
+  background-color: #fff !important;
+  color: var(--main-color);
+  border: 1px solid black;
 }
-.team-hover-layer{
-    background-color: rgba(255, 255, 255, 0.95);
-    inset: 5px;
-    opacity: 0;
-    transform: rotateX(0deg) scale(0.5, 0.5) ;
-    transition: all 0.6s;
+.team-hover-layer {
+  background-color: rgba(255, 255, 255, 0.95);
+  inset: 5px;
+  opacity: 0;
+  transform: rotateX(0deg) scale(0.5, 0.5);
+  transition: all 0.6s;
 }
-.card:hover  .team-hover-layer{
-    transform: rotateY(180deg) scale(1, 1);
-    opacity: 1;
+.card:hover .team-hover-layer {
+  transform: rotateY(180deg) scale(1, 1);
+  opacity: 1;
 }
-.card:hover .icon-round{
-    transform: rotateY(180deg);
+.card:hover .icon-round {
+  transform: rotateY(180deg);
 }
 /* ====================== End Team Section ====================== */
 /* ====================== Start Contact Section ====================== */
 .contact .title > p {
-    color: var(--secandry-color) !important;
-    line-height: 1.5rem;
-  }
-.contact-icon{
-    width: 65px;
-    height: 65px;
-    background-color: var(--bg-secondery-color);
-    border: #fff solid 1px;
-    transition: all 0.5s;
+  color: var(--secandry-color) !important;
+  line-height: 1.5rem;
+}
+.contact-icon {
+  width: 65px;
+  height: 65px;
+  background-color: var(--bg-secondery-color);
+  border: #fff solid 1px;
+  transition: all 0.5s;
 }
 .contact-hovers-container:hover .contact-icon {
-    border: #000 solid 1px;
-    background-color: black;
-    color: white;
+  border: #000 solid 1px;
+  background-color: black;
+  color: white;
 }
-.contact-p{
-    color: #748182;
+.contact-p {
+  color: #748182;
 }
 
-.form-control{
-    box-shadow: none !important;
-    height: 50px;
-    margin-bottom: 14px;
-    border: 2px solid #e0e0e0;
-    display: block;
-    width: 100%;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    background-color: var(--bg-secondery-color);
-    background-clip: padding-box;
-    border: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 0.25rem;
+.form-control {
+  box-shadow: none !important;
+  height: 50px;
+  margin-bottom: 14px;
+  border: 2px solid #e0e0e0;
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: var(--bg-secondery-color);
+  background-clip: padding-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
 }
-.form-control:not(:placeholder-shown){
-    border: none !important; 
+.form-control:not(:placeholder-shown) {
+  border: none !important;
 }
-.form-control:focus{
-    border: none;
-    background-color: var(--bg-secondery-color);
+.form-control:focus {
+  border: none;
+  background-color: var(--bg-secondery-color);
 }
-  .form-section textarea{
-    min-height: 170px;
-  }
-  
-  .btn-custom{
-    border-color: var(--main-color);
-  }
-  .text-end {
-    text-align: left!important;
+.form-section textarea {
+  min-height: 170px;
 }
-  .form-section .btn{
-    background-color: var(--main-color) !important;
-    color: #fff;
-    padding: 10px 30px;
-    font-weight: 400 ;
-  }
-  
-  .form-section .btn:hover {
-    color: black;
-    background-color: var(--bg-secondery-color) !important;
-    border: 1px solid black;
-  }
+
+.btn-custom {
+  border-color: var(--main-color);
+}
+.text-end {
+  text-align: left !important;
+}
+.form-section .btn {
+  background-color: var(--main-color) !important;
+  color: #fff;
+  padding: 10px 30px;
+  font-weight: 400;
+}
+
+.form-section .btn:hover {
+  color: black;
+  background-color: var(--bg-secondery-color) !important;
+  border: 1px solid black;
+}
 /* ====================== End Contact Section ====================== */
 /* ====================== Start footer Section ====================== */
-footer{
-    background-color: var(--main-color);
-    text-align: center;
+footer {
+  background-color: var(--main-color);
+  text-align: center;
 }
-footer > p{
-    color: #748182;
-    font-size: 13px;
-    margin-top: 15px;
+footer > p {
+  color: #748182;
+  font-size: 13px;
+  margin-top: 15px;
 }
 /* ====================== End footer Section ====================== */
